@@ -13,13 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-TARGET_OTA_ASSERT_DEVICE := le_x2,LeMax2_CN,
+TARGET_OTA_ASSERT_DEVICE := le_x2,LeMax2_CN,LeMax2_NA
 
-DEVICE_PATH := device/letv/le_x2
+DEVICE_PATH := device/leeco/x2
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
-BOARD_VENDOR := letv
+BOARD_VENDOR := leeco
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8996
@@ -216,4 +216,4 @@ WIFI_DRIVER_FW_PATH_AP  := "ap"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 
 # inherit from the proprietary version
--include vendor/letv/le_x2/BoardConfigVendor.mk
+-include vendor/leeco/x2/BoardConfigVendor.mk
