@@ -117,9 +117,6 @@ ro.opengles.version=196609
 # system property for maximum number of HFP client connections
 bt.max.hfpclient.connections=1
 
-# System property for cabl
-ro.qualcomm.cabl=2
-
 #Simulate sdcard on /data/media
 #
 persist.fuse_sdcard=true
@@ -268,11 +265,6 @@ ro.dirac.afm.mode=global
 ro.dirac.acs.controller=afm
 #disable pdaf Face frame
 persist.camera.stats.test=5
-
-#enable Apical AD
-ro.qcom.ad=1
-ro.qcom.ad.calib.data=/system/etc/ad_calib_x2.cfg
-ro.qcom.ad.sensortype=3
 
 #Fingerprint up/down for alipay.
 persist.qfp.touch_enabled=1
