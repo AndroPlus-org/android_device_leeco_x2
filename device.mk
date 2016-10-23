@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 
-$(call inherit-product-if-exists, vendor/letv/le_x2/le_x2-vendor.mk)
+$(call inherit-product-if-exists, vendor/leeco/x2/le_x2-vendor.mk)
 
-$(call inherit-product-if-exists, vendor/adds/copyfiles.mk)
+$(call inherit-product-if-exists, vendor/leeco/x2/vendor/copyfiles.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
