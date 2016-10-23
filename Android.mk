@@ -53,8 +53,6 @@ $(shell mkdir -p $(TARGET_OUT)/lib/modules; \
     ln -sf /system/lib/modules/qca_cld/qca_cld_wlan.ko \
         $(TARGET_OUT)/lib/modules/wlan.ko)
 
-include device/letv/le_x2/tftp.mk
-
-include device/letv/le_x2/kernel/AndroidKernel.mk
+include device/leeco/x2/tftp.mk
 
 endif
