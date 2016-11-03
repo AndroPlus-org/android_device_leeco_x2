@@ -1,0 +1,18 @@
+# mount point   fstype  device					device2			flags
+/system_image   emmc    /dev/block/bootdevice/by-name/system        flags=flashimg=1;
+/system         ext4    /dev/block/bootdevice/by-name/system        flags=display="System";mounttodecrypt;
+/data           ext4    /dev/block/bootdevice/by-name/userdata      flags=encryptable=footer;length=-16384;retainlayoutversion;
+/cache          ext4    /dev/block/bootdevice/by-name/cache
+/boot		emmc	/dev/block/bootdevice/by-name/boot          flags=backup=1;display="Kernel";
+/recovery 	emmc	/dev/block/bootdevice/by-name/recovery      flags=backup=1;display="Recovery";
+/misc 		emmc	/dev/block/bootdevice/by-name/misc
+
+/modem_fs1      emmc    /dev/block/bootdevice/by-name/modemst1      flags=display="modem_fs1 "Baseband"";backup=1;mounttodecrypt;
+/modem_fs2      emmc    /dev/block/bootdevice/by-name/modemst2      flags=display="modem_fs2 "Baseband"";backup=1;mounttodecrypt;
+/firmware       vfat    /dev/block/bootdevice/by-name/modem         flags=display="Firmware";backup=0;mounttodecrypt;
+/persist        ext4    /dev/block/bootdevice/by-name/persist       flags=display="Persist";backup=0;
+/keymaster      emmc    /dev/block/bootdevice/by-name/keymaster     flags=display="Keymaster";backup=0;
+
+# Removable storage
+/usbstorage     auto    /dev/block/sdg1          /dev/block/sdg     flags=display="USB OTG";storage;wipeingui;removable;
+

@@ -18,6 +18,12 @@ $(call inherit-product-if-exists, vendor/leeco/x2/le_x2-vendor.mk)
 
 $(call inherit-product-if-exists, vendor/leeco/x2/vendor/copyfiles.mk)
 
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+else
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
